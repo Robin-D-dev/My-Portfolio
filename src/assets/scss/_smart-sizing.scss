@@ -1,0 +1,56 @@
+@use 'sass:math' as math;
+@use 'sass:list' as list;
+
+
+$base-width: 1920;
+
+@function get-rem($target) {
+  $px-context: (1000*.016) * 1px;
+  @return math.div($target, $px-context) * 1rem;
+}
+
+@function get-dynamic-vw($px) {
+  @return calc(#{$px * 100} / var(--window-width) * 1vw);
+}
+
+@function get-vw($px) {
+  @return math.div($px * 100, $base-width) * 1vw;
+  // @return calc(#{$px * 100} /var(--window-width) * 1vw);
+}
+
+@function get-computed-value($value, $vw) {
+  @return if(math.unit($value)=="", if($vw, get-vw($value), get-rem($value * 1px)), $value);
+}
+
+@function handle-shorthand-property($value, $vw) {
+  $result: ();
+
+  @each $val in $value {
+    $result: list.append($result,
+      if(type-of($val)==number,
+        get-computed-value($val, $vw),
+        if($val ==important, null, $val)), $separator: auto);
+  }
+
+  @return $result;
+}
+
+@mixin calculate-sizing($props, $vw: false) {
+
+  @each $property,
+  $value in $props {
+    #{$property}: if(type-of($value)==number,
+        get-computed-value($value, $vw),
+        handle-shorthand-property($value, $vw)) if(list.index($value, important),  !important, null)
+  }
+}
+
+@mixin smart-sizing-sense($props, $boundary: 1279px) {
+  @media screen and (min-width: $boundary) {
+    @include calculate-sizing($props, true);
+  }
+
+  @media screen and (max-width: $boundary) {
+    @include calculate-sizing($props);
+  }
+}

@@ -1,0 +1,179 @@
+@import './smart-sizing';
+
+.pe-5 {
+  @include smart-sizing-sense((padding-right: 48 important));
+}
+
+.p-3 {
+  @include smart-sizing-sense((padding: 16 important));
+
+}
+
+.pb-0 {
+  padding-bottom: 0 !important;
+}
+
+.ps-3 {
+  @include smart-sizing-sense((padding-left: 16 important));
+}
+
+.px-3 {
+  @include smart-sizing-sense((padding-right: 16 important, padding-left: 16 important));
+}
+
+.px-0 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.py-4 {
+  @include smart-sizing-sense((padding-top: 24 important, padding-bottom: 24 important));
+}
+
+.p-md-5 {
+  @include smart-sizing-sense((padding: 48 important));
+}
+
+.ps-1 {
+  @include smart-sizing-sense((padding-left: 4 important));
+}
+
+.pt-0 {
+  padding-top: 0 !important;
+}
+
+.pb-3 {
+  @include smart-sizing-sense((padding-bottom: 16 important));
+}
+
+.my-3 {
+  @include smart-sizing-sense((margin-top: 16 important, margin-bottom: 16 important));
+}
+
+.mt-3 {
+  @include smart-sizing-sense((margin-top: 16 important));
+}
+
+.mt-4 {
+  @include smart-sizing-sense((margin-top: 24 important));
+}
+
+.mt-5 {
+  @include smart-sizing-sense((margin-top: 48 important));
+}
+
+.mt-1 {
+  @include smart-sizing-sense((margin-top: 4 important));
+}
+
+.mb-1 {
+  @include smart-sizing-sense((margin-bottom: 4 important));
+}
+
+.mb-3 {
+  @include smart-sizing-sense((margin-bottom: 16important));
+}
+
+.mb-2 {
+  @include smart-sizing-sense((margin-bottom: 8 important));
+}
+
+.my-4 {
+  @include smart-sizing-sense((margin-top: 24 important, margin-bottom: 24 important));
+}
+
+.mx-2 {
+  @include smart-sizing-sense((margin-right: 8 important, margin-left: 8 important));
+}
+
+.me-3 {
+  @include smart-sizing-sense((margin-right: 16 important));
+}
+
+.ms-3 {
+  @include smart-sizing-sense((margin-left: 16 important));
+}
+
+.mx-1 {
+  @include smart-sizing-sense((margin-right: 4 important, margin-left: 4 important));
+}
+
+.pt-3 {
+  @include smart-sizing-sense((padding-top: 16 important));
+}
+
+.ps-5 {
+  @include smart-sizing-sense((padding-left: 48 important));
+}
+
+.ps-2 {
+  @include smart-sizing-sense((padding-left: 8 important));
+}
+
+.container-fluid {
+  @include smart-sizing-sense((padding-right: 12, padding-left: 12));
+}
+
+.row {
+  @include smart-sizing-sense((margin-left: -12, margin-right: -12));
+}
+
+.row>* {
+  @include smart-sizing-sense((padding-left: 12, padding-right: 12));
+}
+
+.mt-2 {
+  @include smart-sizing-sense((margin-top: 8 important));
+}
+
+.me-2 {
+  @include smart-sizing-sense((margin-right: 8 important));
+}
+
+.mt-lg-0 {
+  margin-top: 0 important
+}
+
+.mx-3 {
+  @include smart-sizing-sense((margin-right: 16 important, margin-left: 16 important));
+}
+
+.ms-20 {
+  @include smart-sizing-sense((margin-left: 2 important));
+}
+
+.m-2 {
+  @include smart-sizing-sense((margin: 8 important));
+}
+
+.py-2 {
+  @include smart-sizing-sense((padding-top: 8 important, padding-bottom: 8 important));
+}
+
+.p-2 {
+  @include smart-sizing-sense((padding: 8 important));
+}
+
+.pt-4 {
+  @include smart-sizing-sense((padding-top: 24 important));
+}
+
+.py-3 {
+  @include smart-sizing-sense((padding-top: 16 important, padding-bottom: 16 important));
+}
+
+.py-40 {
+  @include smart-sizing-sense((padding-top: 4 important, padding-bottom: 4 important));
+}
+
+.card-body {
+  @include smart-sizing-sense((padding: 16));
+}
+
+.ps-2 {
+  @include smart-sizing-sense((padding-left: 8 important));
+}
+
+.gap-3 {
+  @include smart-sizing-sense((gap: 16 important));
+}

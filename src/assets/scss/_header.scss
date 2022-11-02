@@ -1,0 +1,8 @@
+header {
+  @include smart-sizing-sense((height: 60));
+
+  .profile-img {
+    border-radius: 100%;
+    @include smart-sizing-sense((height: 40));
+  }
+}
